@@ -1,0 +1,515 @@
+/** ======================= Global styling ====================== */
+:root{
+    --main-color: #0095f7;
+    --footer-color: #242526;
+    --footer-text-color: #676;
+    --footer-text-head: #E4E9F7;
+    --bg-color: #F6F5FF;
+    --text-color: #333;
+    --btn-color: #f8f9fa;
+    --btn-thick-color: #445bb1;
+    --primary-color:  #c98d83;
+    --secondary : rgb(243, 181, 25);
+    --header-text-transform: uppercase;
+    --header-text-size: 35px;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn{
+  background-color: var(--main-color);
+  border: transparent;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  width: 200px;
+  border-radius: 30px;
+  transition: all .5s ease;
+  text-transform: var(--header-text-transform);
+}
+
+
+/** ============ Header + Navbar section starts ============= */
+header {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.1)), url('images/hero.jpeg');
+
+}
+
+header nav .navbar .nav-links ul li a{
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+header nav .navbar .nav-links ul li a.active{
+  border-bottom: 3px solid var(--main-color);
+  color: var(--main-color);
+  padding-bottom: 1.7em;
+}
+header nav .navbar .nav-links ul li a:hover {
+  color: var(--main-color);
+  /* border-bottom: 3px solid var(--main-color); */
+  transition: 0.2s;
+  padding-bottom: 1.7em;
+}
+
+
+
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  position:absolute;
+  width: 100%;
+  height: 100px;
+  padding: 2.8rem;
+  align-items: center;
+}
+
+.logo img {
+  width: 80%;
+  height: 80px;
+}
+
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links ul li {
+  margin-right: 100px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #063f4f;
+  font-weight:550;
+}
+/* .nav-links a:hover {
+  color: #0bc7fb;
+  border-bottom: 3px solid #0bc7fb;
+  transition: 0.2s;
+  padding-bottom: 2em;
+} */
+
+
+
+
+/* Dropdown styling */
+
+.drop-down {
+  position: relative;
+}
+
+.drop-down:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content {
+  margin-top: 1rem;
+  width: 690%;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem 2rem;
+  padding: 0.5rem 1em;
+  z-index: 1;
+}
+.dropdown-content ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropdown-content ul li{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: justify;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.dropdown-content a{
+  padding: 0.6rem;
+}
+
+
+/** =================== Hero text area starts here ============== */
+.construction {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    height: 100px;
+}
+
+.construction h1 {
+    text-align: left;
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 1.1em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 3, 2, 2.8)
+}
+
+.construction p {
+    line-height: 1.5rem;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 3, 2, 10);
+    margin-bottom: 4rem;
+
+}
+
+/** ================ Hero button starts here ============= */
+
+.services-btn{
+    background-color: whitesmoke;
+    padding: 15px 50px;
+    border-radius: 15px;
+    border: transparent;
+    cursor: pointer;
+    color: #063f4f ;
+    font-size: 1rem;
+}
+
+.services-btn:hover{
+    background-color: var(--main-color);
+    transition: 0.3s;
+    color: #ffffff;
+    border: transparent;
+    border-radius: 25px;
+    border: none;
+}
+
+
+
+
+/** =================== Mini About section starts here ===================== */
+.kudos-pools{
+    margin: 5rem 5rem;
+}
+
+.kudos-pools h2{
+    text-transform: var(--header-text-transform);
+    font-size: var(--header-text-size);
+    font-weight: 600;
+    color: var(--text-color) ;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.kudos-pools p{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--footer-text-color);
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+.learn-btn {
+  cursor: pointer;
+  background-color: var(--main-color);
+  padding: 15px 50px;
+  border-radius: 15px;
+  border: transparent;
+  margin: 0 auto;
+  display: flex;
+  color: #ffffff ;
+  font-size: 1rem;
+  margin-bottom: 10rem;
+}
+
+.learn-btn:hover{
+  background-color: var(--btn-thick-color);
+  color: #ffffff;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+
+
+/** ================= Services section starts ================ */
+#product1{
+  text-align: center;
+}
+#product1 h2{
+  text-transform: var(--header-text-transform);
+  font-size: var(--header-text-size);
+  color: var(--text-color);
+}
+#product1 p{
+  text-align: center;
+}
+
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+#product1 .pro{
+  width: 25%;
+  min-width: 150px;
+  padding: 10px 10px;
+  border: 1px solid #fcfcfc;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product1 .pro:hover{
+    /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02); */
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+    background-color: #f0f6f8;
+  }
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: center;
+    padding: 5px 0;
+}
+  #product1 .pro .des h5{
+    padding: 1rem;
+    color: #23303a;
+    font-size: 20px;
+    
+  }
+
+
+
+
+/** =============== Gallery section starts ============= */
+.gallery{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+.gallery .heading h2{
+    text-align: center;
+    text-transform: var(--header-text-transform);
+    font-size: var(--header-text-size);
+    color: var(--text-color);
+}
+.gallery .gallery-container {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+  .gallery .gallery-container .gallery-box {
+    position: relative;
+    flex: 1 1 18rem;
+    overflow: hidden;
+}
+  .gallery .gallery-container .gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  .gallery .gallery-container .gallery-box .text {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    padding-top: 8rem;
+    background: rgba(255, 244, 243, 0.78);
+    transition: 0.5s;
+}
+  .gallery .gallery-container .gallery-box:hover .text {
+    top: 0;
+}
+  .gallery-box .text h2 {
+    font-size: 1.2rem;
+}
+  .gallery-box .text p {
+    margin: 0.4rem 0 1rem;
+}
+
+
+/** ================ Testimony section starts ================== */
+
+/* review */
+
+.review{
+  text-align: center;
+  margin-top: 3rem;
+  background: var(--bg-color);
+}
+
+.review .heading{
+  margin-top: 8rem;
+  margin-bottom: 2rem; 
+  font-size: var(--header-text-size);
+  text-transform: var(--header-text-transform);
+}
+.review .box-container{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+.review .box-container .box{
+
+  border: 0.1rem solid rgba(185, 177, 177, 0.2);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--white);
+}
+
+.review .box-container .box .user{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box h3{
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.review .box-container .box .stars i{
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.review .box-container .box p{
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  padding-top: 1rem;
+}
+
+/* review end */
+
+
+
+
+
+/** ================ Footer section starts =============== */
+footer{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2.5rem;
+    background-color: var(--text-color);
+    color: var(--footer-text-head);
+}
+
+.footer2-container{
+  display: flex;
+  gap: 5rem;
+  cursor: pointer;
+
+}
+footer .footer2 h3{
+    text-transform: var(--header-text-transform);
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer .footer2 form input[type="text"]{
+    padding: 0.5rem;
+    padding-right: 3rem;
+    border: transparent;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+footer .footer2 form input[type="email"]{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 3rem;
+    border: transparent;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+footer .footer2 form input[type="submit"].btn-input{
+    padding: 0.5rem;
+    padding-right: 9.4rem;
+    margin-top: 0.5rem;
+    background-color: var(--main-color);
+    border: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+
+footer .footer2 a{
+    color: var(--footer-text-color);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+footer .footer2 a:hover{
+    color: var(--main-color);
+    transition: all 0.5s;
+}
+
+footer .footer2 .info{
+    font-size: 13px;
+}
+
+footer .footer2 i{
+    color: var(--main-color);
+    padding-right: 1rem;
+}
+
+.footer3{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-color);
+    background: var(--footer-color);
+    height: 100%;
+    width: 100%;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.whatsapp-icon {
+  position: fixed !important;
+  bottom: 5rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
